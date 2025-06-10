@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love Arathi ❤️</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      background-color: #ffe6e6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #ff3333;
+      font-size: 3rem;
+    }
+
+    .heart {
+      font-size: 2rem;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #ff6666;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #ff4d4d;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px #e60000;
+    }
+
+    button:active {
+      box-shadow: none;
+      transform: translateY(5px);
+    }
+  </style>
+</head>
+<body>
+  <h1>To My Dearest Arathi ❤️</h1>
+  <div class="heart">💕💖💞💘💟</div>
+  <p id="message">Click the button to reveal a surprise!</p>
+  <button onclick="revealMessage()">Reveal Surprise</button>
+
+  <script>
+    function revealMessage() {
+      const messages = [
+        "You are the ❤️ of my life!",
+        "Every moment with you feels magical! ✨",
+        "You make my heart dance 💃🕺",
+        "I love you more than words can say! 🥰",
+        "You’re my sunshine on cloudy days ☀️🌧️"
+      ];
+      const messageContainer = document.getElementById('message');
+      
+      let index = 0;
+      const interval = setInterval(() => {
+        if (index < messages.length) {
+          messageContainer.innerHTML = messages[index];
+          index++;
+        } else {
+          clearInterval(interval);
+          messageContainer.innerHTML += `<br>💖 Forever Yours, Leo 💖`;
+        }
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
